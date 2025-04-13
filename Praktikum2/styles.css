@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f0f8; /* Latar belakang lembut */
+    color: #333; /* Warna teks */
+    margin: 0;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #d5006d; /* Warna judul */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Pusatkan tabel */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan tabel */
+    border-radius: 8px; /* Sudut melengkung */
+    overflow: hidden; /* Menghindari overflow pada sudut melengkung */
+}
+
+th, td {
+    border: 1px solid #d5006d; /* Warna border tabel */
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s; /* Transisi halus untuk hover */
+}
+
+th {
+    background-color: #f06292; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+    font-weight: bold; /* Teks tebal */
+}
+
+tr:nth-child(even) {
+    background-color: #f8bbd0; /* Warna latar belakang baris genap */
+}
+
+tr:hover {
+    background-color: #f48fb1; /* Warna latar belakang saat hover */
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 14px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+    th, td {
+        padding: 8px; /* Padding lebih kecil di perangkat kecil */
+    }
+}
