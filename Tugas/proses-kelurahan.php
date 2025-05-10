@@ -6,12 +6,12 @@ require 'dbkoneksi.php';
 if (isset($_POST["submit"])) {
 
     // tangkap data dari form dengan aman
-    $id     = $_POST['id'] ?? null;
+    $id = $_POST['id'] ?? null;
     $kec_id = $_POST['kec_id'] ?? null;
-    $nama   = $_POST['nama'] ?? null;
+    $nama = $_POST['nama'] ?? null;
 
     switch ($_POST['submit']) {
-        case 'Simpan':
+        case 'simpan':
             // proses insert ke database 
             try {
                 $sql = "INSERT INTO kelurahan (nama, kec_id) VALUES (?, ?)";
@@ -19,13 +19,14 @@ if (isset($_POST["submit"])) {
                 $stmt->execute([$nama, $kec_id]);
 
                 header("Location: list-kelurahan.php");
+                exit;
             } catch (\Throwable $e) {
                 echo "Error while insert data kelurahan<br>";
-                echo $e;
+                echo $e->getMessage();
             }
             break;
 
-        case 'Ubah':
+        case 'ubah':
             // proses update ke database
             try {
                 $sql = "UPDATE kelurahan SET nama = ?, kec_id = ? WHERE id = ?";
@@ -33,25 +34,26 @@ if (isset($_POST["submit"])) {
                 $stmt->execute([$nama, $kec_id, $id]);
 
                 header("Location: list-kelurahan.php");
+                exit;
             } catch (\Throwable $e) {
                 echo "Error while update data kelurahan<br>";
-                echo $e;
+                echo $e->getMessage();
             }
             break;
 
-        default:
+        case 'Hapus':
             // proses hapus
             try {
                 $sql = "DELETE FROM kelurahan WHERE id = ?";
                 $stmt = $db->prepare($sql);
                 $stmt->execute([$id]);
-
+        
                 header("Location: list-kelurahan.php");
+                exit;
             } catch (\Throwable $e) {
                 echo "Error while delete data kelurahan<br>";
-                echo $e;
+                echo $e->getMessage();
             }
             break;
     }
 }
- 

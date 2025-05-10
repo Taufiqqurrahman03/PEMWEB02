@@ -13,7 +13,6 @@ $menus = [
             "label" => "Tambah" 
          ],
         ]
-
     ],
     [
         "icon" => "users",
@@ -28,12 +27,37 @@ $menus = [
             "label" => "Tambah" 
          ],
         ]
- 
     ],
-
-]
+    [
+        "icon" => "stethoscope",
+        "label" => "periksa",
+        "items" => [
+         [
+            "link" => "list-periksa.php",
+            "label" => "list Pemeriksaan"
+         ],  
+         [
+            "link" => "form-periksa.php",
+            "label" => "Tambah" 
+         ],
+        ]
+    ],
+    [
+        "icon" => "user-nurse",
+        "label" => "paramedik",
+        "items" => [
+         [
+            "link" => "list-paramedik.php",
+            "label" => "List Paramedik"
+         ],  
+         [
+            "link" => "form-paramedik.php",
+            "label" => "Tambah" 
+         ],
+        ]
+    ],
+];
 ?>
-
 
 
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">

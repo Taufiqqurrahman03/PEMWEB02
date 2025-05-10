@@ -1,4 +1,7 @@
+
+
 <?php
+require_once './dbkoneksi.php';
 
 // define("HOST", "localhost");
 // define("DBNAME", "dbpuskesmas");
