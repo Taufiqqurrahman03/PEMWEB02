@@ -4,3 +4,4 @@ Link linkedin : https://www.linkedin.com/posts/sopiani-azzahra-7b4787344_pemogra
 Link repo : https://github.com/Taufiqqurrahman03/PEMWEB02/tree/master
 Username : admin
 Pasword : password
+link project2 uts : http://localhost/pemweb2/projek2UTS/login.php
